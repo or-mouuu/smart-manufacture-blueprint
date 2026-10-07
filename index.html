@@ -37,9 +37,9 @@
   .d{display:none}
   @media (min-width:900px){
     .m{display:none}
-    /* 橫式圖左緣淺灰、右緣萊姆綠，左右留白各取同色 */
-    .d{display:block;background:linear-gradient(to right,#f8f7f5 50%,#c9dc5e 50%)}
-    .d img{display:block;width:100%;max-width:1680px;height:auto;margin:0 auto}
+    /* 橫式圖隨視窗寬度滿版放大 */
+    .d{display:block}
+    .d img{display:block;width:100%;height:auto}
   }
 
   /* 只給搜尋引擎與螢幕閱讀器讀取的完整文字，畫面上不顯示 */
@@ -140,7 +140,7 @@
   <h1 class="sr">電路板智慧製造AI藍圖</h1>
   <!-- 只有 900px 以上才下載橫式大圖；手機只拿到 1px 透明佔位圖 -->
   <picture>
-    <source media="(min-width:900px)" srcset="img/desktop.jpg">
+    <source media="(min-width:900px)" srcset="img/desktop.jpg 3360w, img/desktop-xl.jpg 6091w" sizes="100vw">
     <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="3360" height="1935" alt="">
   </picture>
   <div class="sr">
