@@ -1,0 +1,5 @@
+# 備份檔與原始整張圖（網頁未使用）
+*.bak-*
+*.bak-*.html
+blueprint.jpg
+.DS_Store

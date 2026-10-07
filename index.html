@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>電路板智慧製造AI藍圖</title>
+<meta name="description" content="藍圖提供企業做為盤點現況、選擇題目與排定投資順序之工具，建議搭配「2026年電路板智慧製造導入指引」的說明及導入方法，選擇適合企業的切入點。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("js")</script>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:#f8f7f5}
+  .band{background:#f8f7f5}
+  .band--lime{background:#c9dc5e}
+  /* 欄寬：手機滿版、電腦 600px 置中；文字尺寸用 cqw 跟著欄寬等比縮放，與圖片比例一致 */
+  .col{max-width:600px;margin:0 auto;container-type:inline-size}
+  .col img{display:block;width:100%;height:auto}
+
+  /* 以下數值皆由原圖（寬 1291px）量測換算：1cqw = 原圖 12.91px */
+  .txt{
+    font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+    font-weight:500;color:#252422;
+  }
+  .intro{
+    font-size:3.25cqw;line-height:1.79;letter-spacing:.04em;
+    padding:1.39% 10% 2.09% 9.7%;   /* 原圖 y630–900 區段 */
+  }
+  .intro em{font-style:normal;color:#9aa700}
+  .note{
+    font-size:2.51cqw;line-height:1.6;
+    padding:1.59% 10% 2.6% 9.76%;   /* 原圖 y2172–2330 區段 */
+  }
+
+
+  /* ---------- 動態 ---------- */
+  /* 浮出：只有 JS 執行時才先隱藏（html.js），JS 失敗內容照常顯示 */
+  .js .rv{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+  .js .rv.in{opacity:1;transform:none}
+  .hero-in{animation:heroIn .9s ease both}
+  @keyframes heroIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+  /* 成熟度箭頭：疊在原圖箭頭正上方，依序亮起、循環播放（座標由原圖量測） */
+  .mat{position:relative}
+  .mat .arw{position:absolute;left:45.08%;width:3.95%;height:auto;overflow:visible;
+    transform-origin:50% 30%;animation:arw 3.6s ease-in-out infinite}
+  .mat .arw polygon{stroke:#262626;stroke-width:3;stroke-linejoin:round;fill:#d9d9d5;animation:arwFill 3.6s ease-in-out infinite;animation-delay:inherit}
+  .mat .arw:nth-of-type(1){top:18.87%;animation-delay:0s}
+  .mat .arw:nth-of-type(2){top:34.43%;animation-delay:.45s}
+  .mat .arw:nth-of-type(3){top:50%;animation-delay:.9s}
+  .mat .arw:nth-of-type(4){top:65.57%;animation-delay:1.35s}
+  .mat .arw:nth-of-type(5){top:81.13%;animation-delay:1.8s}
+  /* 平常淺灰（暗），輪到時亮成萊姆綠＋光暈＋微放大 */
+  @keyframes arw{
+    0%,22%,100%{transform:scale(1);filter:none}
+    8%{transform:scale(1.25);filter:drop-shadow(0 0 3px rgba(190,225,20,1)) drop-shadow(0 0 9px rgba(190,225,20,.8))}
+  }
+  @keyframes arwFill{
+    0%,26%,100%{fill:#d9d9d5}
+    6%,14%{fill:#cfe33a}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .js .rv{opacity:1;transform:none;transition:none}
+    .hero-in{animation:none}
+    .mat .arw{display:none}  /* 不播動畫時直接顯示原圖的箭頭 */
+  }
+
+  /* 只給搜尋引擎與螢幕閱讀器讀取的完整文字，畫面上不顯示 */
+  .sr{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+</style>
+</head>
+<body>
+<main>
+  <div class="band">
+    <div class="col">
+      <h1 class="sr">電路板智慧製造AI藍圖</h1>
+      <img class="hero-in" src="img/01-header.jpg" width="1291" height="630" alt="">
+      <p class="txt intro">藍圖提供企業做為盤點現況、選擇題目與排定投資順序之工具，建議搭配<em>「2026年電路板智慧製造導入指引」</em>的說明及導入方法，選擇適合企業的切入點。</p>
+
+      <div class="mat">
+        <img src="img/02-maturity.jpg" width="1291" height="1272" alt="">
+        <svg class="arw" viewBox="0 0 51 33" aria-hidden="true"><polygon points="1.5,1.5 49.5,1.5 25.5,31.5"/></svg>
+        <svg class="arw" viewBox="0 0 51 33" aria-hidden="true"><polygon points="1.5,1.5 49.5,1.5 25.5,31.5"/></svg>
+        <svg class="arw" viewBox="0 0 51 33" aria-hidden="true"><polygon points="1.5,1.5 49.5,1.5 25.5,31.5"/></svg>
+        <svg class="arw" viewBox="0 0 51 33" aria-hidden="true"><polygon points="1.5,1.5 49.5,1.5 25.5,31.5"/></svg>
+        <svg class="arw" viewBox="0 0 51 33" aria-hidden="true"><polygon points="1.5,1.5 49.5,1.5 25.5,31.5"/></svg>
+      </div>
+      <section class="sr">
+        <h2>能力成熟度</h2>
+        <ul>
+          <li>短期：連結化（Connectivity）→ 可視化（Visibility）；M1 數據就緒工廠</li>
+          <li>中期：透明化（Transparency）→ 預測化（Predictability）；M2 預測閉環工廠</li>
+          <li>長期：決策化（Decision）→ 適應化（Adaptability）；M3 人機協同自主營運</li>
+        </ul>
+      </section>
+      <p class="txt note">短、中、長期代表能力成熟度，而非固定年限。一般而言，短期約為1至2年、中期約為3至4年、長期為5年以上；惟企業可依現況跨階段並行</p>
+
+      <img class="rv" src="img/03-domain-1.jpg" width="1291" height="1013" alt="">
+      <img class="rv" src="img/03-domain-2.jpg" width="1291" height="917" alt="" loading="lazy">
+      <img class="rv" src="img/03-domain-3.jpg" width="1291" height="1034" alt="" loading="lazy">
+      <img class="rv" src="img/03-domain-4.jpg" width="1291" height="1082" alt="" loading="lazy">
+      <img class="rv" src="img/03-domain-5.jpg" width="1291" height="1088" alt="" loading="lazy">
+      <img class="rv" src="img/03-domain-6.jpg" width="1291" height="976" alt="" loading="lazy">
+      <img class="rv" src="img/03-domain-7.jpg" width="1291" height="1137" alt="" loading="lazy">
+      <img class="rv" src="img/03-domain-8.jpg" width="1291" height="1300" alt="" loading="lazy">
+      <div class="sr">
+        <section><h2>1 市場接單與研發設計</h2><ul>
+          <li>短期：詢價單與規格數位化（Gerber／ODB++）、成本與良率估算、DFM規則與能力數位化、製程知識助手（PCB GPT）</li>
+          <li>中期：訂單風險評分、設計風險預測、設計變更影響分析、歷史缺陷回饋、材料／疊構建議、產線稼動率預測</li>
+          <li>長期：生成式疊構與設計建議、自主接單報價Agent、業務—工廠—供應鏈Agent協同、市場需求預測與主動排產</li>
+        </ul></section>
+        <section><h2>2 NPI與工程準備</h2><ul>
+          <li>短期：BOM表檢核、NPI戰情室、材料設備治工具管理</li>
+          <li>中期：虛擬試產與製程路徑模擬、首件風險預測、製程參數建議、試產異常根因分析</li>
+          <li>長期：NPI數位孿生、SOP自動生成、新廠新線快速複製</li>
+        </ul></section>
+        <section><h2>3 廠務、能源與環安</h2><ul>
+          <li>短期：水電氣與化學品計量、能源管理可視化、廢水廢氣與環境監控、AI影像工安監控</li>
+          <li>中期：能耗預測與需量管理、空壓／冰水／排氣AI節能、藥液與廢液回收最佳化、能耗—碳排關聯分析</li>
+          <li>長期：廠務數位孿生、能源自主調度、廠務自主運轉Agent</li>
+        </ul></section>
+        <section><h2>4 製程設備</h2><ul>
+          <li>短期：設備聯網（PCBECI）與資料自動上傳、設備狀態可視化、參數自動載入</li>
+          <li>中期：設備健康診斷與預知保養、故障根因分析、維修工單與備品最佳化、設備參數與能耗最佳化、雙向聯網控制</li>
+          <li>長期：設備自主調參、設備維護Agent、設備協同運作、Physical AI（AMR／機械手臂上下料）</li>
+        </ul></section>
+        <section><h2>5 生產與排程</h2><ul>
+          <li>短期：單站製程管制、工單可視化、SOP／作業指導書自動產生</li>
+          <li>中期：動態產線流程調度系統、AMR車隊應用、電子派工與即時進度</li>
+          <li>長期：最佳化產線流程調度、多目標自主排程、跨線跨廠訂單配置、生產策略與預測最佳化</li>
+        </ul></section>
+        <section><h2>6 品質與控制</h2><ul>
+          <li>短期：AOI／AVI檢測資料整合、AI瑕疵複判、異常可視化、SPC製程品質監控</li>
+          <li>中期：虛擬量測、良率預測、失效偵測與分類（FDC）、品質風險分級與預警</li>
+          <li>長期：自適應製程控制、品質Agent、設計—製程—品質閉環</li>
+        </ul></section>
+        <section><h2>7 供應鏈與客戶協同</h2><ul>
+          <li>短期：供應商／材料／庫存／物流可視化、材料批號履歷、客戶訂單與交期查詢、智慧倉儲</li>
+          <li>中期：供應風險分析、替代料分析、需求供給情境、採購與庫存最佳化、客訴根因分析輔助</li>
+          <li>長期：自主代理供應鏈（採購／補料Agent）、多廠動態重配置、客戶協同設計平台、動態接單與交期承諾</li>
+        </ul></section>
+        <section><h2>8 營運與永續決策</h2><ul>
+          <li>短期：企業戰情室、產能／品質／交期／碳可視化、企業資源規劃系統、管理報表自動化、組織碳盤查</li>
+          <li>中期：營收／交期／獲利預測、產品與客戶獲利分析、產品碳足跡自動計算、產能投資與風險情境模擬</li>
+          <li>長期：企業數位孿生、經營決策AI代理、跨廠產能×碳排自主配置</li>
+        </ul></section>
+      </div>
+    </div>
+  </div>
+
+  <div class="band band--lime">
+    <div class="col">
+      <img class="rv" src="img/04-found-1.jpg" width="1291" height="280" alt="" loading="lazy">
+      <img class="rv rv-seq" src="img/04-found-2.jpg" width="1291" height="621" alt="" loading="lazy">
+      <img class="rv rv-seq" src="img/04-found-3.jpg" width="1291" height="599" alt="" loading="lazy">
+      <img class="rv rv-seq" src="img/04-found-4.jpg" width="1291" height="600" alt="" loading="lazy">
+      <img class="rv rv-seq" src="img/04-found-5.jpg" width="1291" height="725" alt="" loading="lazy">
+      <section class="sr">
+        <h2>智慧製造基礎賦能</h2>
+        <h3>人才與永續</h3><ol><li>AI／數位人才培訓、碳盤查能力</li><li>IT／OT／製程跨域團隊、產品碳足跡</li><li>人機協作新職務、淨零路徑（2030減30%）</li></ol>
+        <h3>資料治理</h3><ol><li>料號／主資料與命名標準、資料字典</li><li>資料品質監控、特徵庫、MLOps模型維運</li><li>跨廠與供應鏈資料共享機制</li></ol>
+        <h3>連網與OT資安</h3><ol><li>設備／感測聯網、OT資產盤點與網路分區（IEC 62443）</li><li>統一資料架構（資料湖／UNS）、OT資安監控</li><li>零信任架構、跨廠安全資料交換</li></ol>
+        <h3>AI與Agent治理</h3><ol><li>生成式AI使用規範、人機協作（HITL）原則</li><li>模型驗證與監控、權限分級</li><li>Agent權限／稽核／可解釋（對齊AI基本法七原則）</li></ol>
+      </section>
+    </div>
+  </div>
+</main>
+<script>
+/* 捲到時浮出；同一批同時進入畫面的區塊依序錯開 0.15 秒 */
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(entries){
+    var n=0;
+    entries.forEach(function(e){
+      if(!e.isIntersecting) return;
+      e.target.style.transitionDelay=(n++*0.15)+'s';
+      e.target.classList.add('in'); io.unobserve(e.target);
+    });
+  },{rootMargin:'0px 0px -10% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
